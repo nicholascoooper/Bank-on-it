@@ -17,7 +17,8 @@ classDiagram
 		+makeWithdrawl(): void
 	}
 
-    class HasMenu(interface){
+    class HasMenu{
+        <interface>>
         +menu(): String
         +start(): void
     }
@@ -41,7 +42,8 @@ classDiagram
         +getReport(): String
     }
 
-    class User(abstract){
+    class User{
+        <<abstract>>
         -userName: String
         -PIN: String
         +login(): boolean 
@@ -54,8 +56,8 @@ classDiagram
     }
     
     SavingsAccount <|-- CheckingAccount
-    User(abstract) <|-- Customer
-    HasMenu(interface) <.. User(abstract)
-    HasMenu(interface) <.. CheckingAccount
+    User <|-- Customer
+    HasMenu <.. User
+    HasMenu <.. CheckingAccount
     
 ```
