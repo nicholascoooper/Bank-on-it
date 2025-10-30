@@ -18,7 +18,7 @@ classDiagram
 	}
 
     class HasMenu{
-        <interface>>
+        <<interface>>
         +menu(): String
         +start(): void
     }
@@ -55,7 +55,7 @@ classDiagram
         +getReport(): (abstract)String
     }
     
-    SavingsAccount <|-- CheckingAccount
+    CheckingAccount <|-- SavingsAccount
     User <|-- Customer
     HasMenu <.. User
     HasMenu <.. CheckingAccount
