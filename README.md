@@ -75,18 +75,64 @@ class CheckingAccount implements HasMenu
   ====================
     double balance
   ====================
-    CheckingAccount()
-    CheckingAccount(double balance)
-    main()
-    string menu()
-    void start()   
-    double getBalance()
-    string getBalanceString()
-    void setBalance(double balance)
-    void checkBalance()
-    private double getDouble()
-    void makeDeposit()
-    void makeWithdrawal
+    CheckingAccount(){
+    balance = 0.0
+
+    CheckingAccount(double balance){
+    balance = balance
+
+    main(){
+    new CheckingAccount
+
+    string menu(){
+    print options 
+    input option
+
+    void start(){
+    while bool keepgoing
+    if 0
+        false
+    else 1
+        checkBalaance
+    else 2
+        makedeposit
+    else 3
+        makewithdrawl
+    else
+        print invalid        
+   
+    double getBalance(){
+        return balance
+
+    string getBalanceString(){
+        return string format balance
+
+    void setBalance(double balance){
+        balnace = balance
+
+    void checkBalance(){
+        print balance
+
+    private double getDouble(){
+        try double parsedouble input
+        exception print invalid return 0
+
+    void makeDeposit(){
+        print enter deposit amount
+        double  input
+        if input > 0
+            balance + depo amount
+        else
+            print invalid
+        
+    void makeWithdrawal(){
+        print enter withdrawl amount
+        double input
+        if input > 0 and < balance
+            balance - input
+        else
+            print invalid
+            
   ====================
 
 
@@ -96,9 +142,15 @@ class SavingsAccount extends CheckingAccount
     double interestRate
   ====================
     main()
-    calcInterest()
-    void setInterestRate()
-    double getInterestRate()
+    calcInterest(){
+        double interest =getBalance * intrestrate
+        setbalnce (getbalnce + interest)
+
+    void setInterestRate(intrate){
+        interestrate = intrate
+
+    double getInterestRate(){
+        return intrestRate
   ====================
 
 
