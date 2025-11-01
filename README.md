@@ -160,13 +160,31 @@ abstract class User implements HasMenu, Serializable
     string userName
     string PIN
   ====================
-    boolean login()
-    boolean login(userName, PIN)
-    void setUserName(userName)
-    string getUserName()
-    void setPIN(PIN)
-    string getPIN()
-    abstract string getReport()
+    boolean login(){
+        print enter username
+        input username
+        print enter pin
+        input pin
+        return username, pin
+
+    boolean login(userName, PIN){
+        return this,equals username and this = pin
+
+    void setUserName(userName){
+        this.unsername - username
+
+    string getUserName(){
+        return username
+    
+    void setPIN(PIN)[
+        this.pin = pin
+
+    string getPIN(){
+        return pin
+    
+    abstract string getReport(){
+        
+
   ====================
 
 
@@ -176,12 +194,45 @@ class Customer extends User
     CheckingAccount checking 
     SavingsAccount savings 
   ====================
-    void main()
-    Customer()
-    Customer(usernName, PIN)
-    void start()
+    void main(){
+        customer testciustomer = new customer alice 0000
+
+    Customer(){
+        alice, 0000
+    
+    Customer(usernName, PIN)[
+    this username = useraname
+    this.pin = pin
+    this.checking=new checkingaccount
+    this.savings=new savingsaccount
+
+    void start(){
+        while keepgoing
+            menu()
+        
     string menu()
-    void changePin()
-    string getReport()
+        print menu options 
+            if 0
+                keepgoing false
+            else if 1
+                checking.start
+            else if 2
+                savings.start
+            else if 3
+                changepin()
+            else
+                print invalid 
+
+    void changePin(){
+        print enter new pin
+        input PIN
+        print pin successfully changes
+        
+
+    string getReport(){
+        print customer username
+        print checking balance
+        print savings balance:
+
   ====================
 
