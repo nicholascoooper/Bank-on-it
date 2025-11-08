@@ -54,6 +54,29 @@ classDiagram
         +getPIN(): String
         +getReport(): (abstract)String
     }
+
+    class Admin{
+        +Admin()
+        +menu(): String
+        +getReport(): String
+    }
+    
+    class Bank{
+        -admin: Admin
+        -customers: ArrayList
+        +Bank()
+        +main(): void
+        +loadSampleCustomers(): void
+        +loadCustomers(): void
+        +saveSustomers(): void
+        +fullCustomerReport(): void
+        +addUser(): void
+        +applyInterest(): void
+        +loginAsCustomer(): void
+        +menu(): void
+        +start(): void
+        +startAdmin(): void
+    }
     
     CheckingAccount <|-- SavingsAccount
     User <|-- Customer
@@ -235,4 +258,109 @@ class Customer extends User
         print savings balance:
 
   ====================
+
+Bank
+class Bank implements HasMenu
+  ====================
+    admin: Admin
+    customers: ArrayList
+  ====================
+
+imports
+
+public class bank implements hasmenu
+admin admin
+customerlist customers
+scanner input
+customer currentcustomer
+string DATA_FILE
+
+public Bank(){
+    admin = new admin
+    loadSAmplecustomers()
+    savecustomer()
+    loadCustomers()
+    start()
+    saveCustomers()
+}
+
+Public void menu{
+    print bank menu
+    print 0exit  1loginadmin  2login cutomer 3
+}
+
+public start{
+    string choice
+    bool keepgoing
+    while keepging
+    if choice 0{
+        print exiting
+    else if 1{
+    else if 2{
+        loginCustomer
+    else
+        print invalid select
+}
+
+public startAdmin{
+    string choice
+    bool keepgoing
+    while keepging{
+    if choice 0{
+        print exiting
+    else if 1{
+        fullCustomerReport()
+    else if 2{
+        addUser()
+    else if 3{
+        applyinterest()
+    else{
+        print invalid select
+}
+
+public void fullCustomerReport{
+    print fyllcustomer report
+    for Customer c : customers
+        print c.getreport()
+}
+
+public void addUser{
+    print name:
+    input name
+    print PIN
+    input PIN
+    Customer newcustomer = new customer(name,PIN)
+    customers.add(newcustomer)
+    print added custoemr name
+}
+
+public void applyinterest{
+    print apply interest
+    for Customer c :customers{
+        c.getsavings().calcinterest() 
+        print new balance c.getsavings().getbalance()
+}
+
+public void logincustomer{
+    print enetr username
+    input name
+    print enter pin
+    inputpin
+    for customer c : customers
+        if c.getusername().equals(name) && c.checkpin(pin)
+            currentCustoimer = c
+    if currentCustomer != null
+        curetnCustomer.start()
+    else
+        print login fail
+}
+    
+public void saveCustomers{
+
+}
+
+
+public void loadCustomers{
+
+}
 
